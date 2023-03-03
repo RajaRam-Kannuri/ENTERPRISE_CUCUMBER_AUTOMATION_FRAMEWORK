@@ -1,8 +1,0 @@
-com/webDriverInteractions/WebDriverInteractions.class
-com/Excel_Operations/DatabankController.class
-com/Util/FileOperations.class
-com/stringoperations/StringOperations.class
-com/byOperations/ByOperations.class
-com/Util/BrowserFactory.class
-com/Util/BrowserTasks.class
-com/DBConnection/DB_Connection.class
