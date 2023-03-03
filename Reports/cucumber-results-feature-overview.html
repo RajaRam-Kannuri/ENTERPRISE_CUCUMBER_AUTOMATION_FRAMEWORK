@@ -1,0 +1,71 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+</style>
+<title>Features Overview</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["corechart","bar"]});
+	  google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var sc_data = google.visualization.arrayToDataTable([
+          ['Status', 'Number'],
+['Passed', 0], ['Failed', 3], ['Undefined', 3]
+        ]);
+
+        var sc_options = {
+          title: 'Scenario Status',
+          is3D: true,
+		  slices: {
+            0: { color: 'green' },
+            1: { color: 'red' , offset: 0.1 },
+            2: { color: 'silver' , offset: 0.1 }
+          },
+		  tooltip: {
+		  showColorCode: true
+		  }
+        };
+
+        var sc_chart = new google.visualization.PieChart(document.getElementById('scenariochart_3d'));
+        sc_chart.draw(sc_data, sc_options);
+        var feat_data = google.visualization.arrayToDataTable([
+          ['Status', 'Number'],
+['Passed', 0], ['Failed', 1], ['Undefined', 0]
+        ]);
+
+        var feat_options = {
+          title: 'Feature Status',
+          is3D: true,
+		  slices: {
+            0: { color: 'green' },
+            1: { color: 'red', offset: 0.1 },
+            2: { color: 'silver', offset: 0.1 }
+          },
+		  tooltip: {
+		  showColorCode: true
+		  }
+        };
+
+        var feat_chart = new google.visualization.PieChart(document.getElementById('featurechart_3d'));
+        feat_chart.draw(feat_data, feat_options);
+      }
+    </script>
+  </head>
+  <body>
+  <h1>Overview Chart</h1>
+	<table class="chart"><tr class="chart">
+    <td class="chart"><div id="featurechart_3d"  style="width: 400px; height: 300px;" ></div></td>
+    <td class="chart"><div id="scenariochart_3d" style="width: 400px; height: 300px;"></div></td></tr>
+	</table>
+<h1>Features Status</h1><table><tr><th>Feature Name</th><th>Status</th><th>Passed</th><th>Failed</th><th>Undefined</th><th>Duration</th></tr><tr class="failed"><td>Google Search Feature Validation</td><td>failed</td><td>0</td><td>3</td><td>6</td><td>0.14s</td></tr></table><h1>Scenario Status</h1><table><tr><th>Feature Name</th><th>Scenario</th><th>Status</th><th>Passed</th><th>Failed</th><th>Undefined</th><th>Retries</th><th>Duration</th></tr><tr class="failed"><td>Google Search Feature Validation</td><td></td><td>failed</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0.13s</td></tr><tr class="skipped"><td>Google Search Feature Validation</td><td>Search with Aviva and verify results links</td><td>skipped</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0.00s</td></tr><tr class="failed"><td>Google Search Feature Validation</td><td></td><td>failed</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0.00s</td></tr><tr class="skipped"><td>Google Search Feature Validation</td><td>Verify Title in Aviva Home Page</td><td>skipped</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0.00s</td></tr><tr class="failed"><td>Google Search Feature Validation</td><td></td><td>failed</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0.00s</td></tr><tr class="skipped"><td>Google Search Feature Validation</td><td>Verify Error Message in Aviva Login Page</td><td>skipped</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0.00s</td></tr></table>	
+	</body>
+</html>

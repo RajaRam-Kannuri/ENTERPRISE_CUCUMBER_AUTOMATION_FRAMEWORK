@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------
+Test set: runnertestfile.Runner_File
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 104.21 sec <<< FAILURE! - in runnertestfile.Runner_File
+Search with Aviva and verify results links(Google Search Feature Validation)  Time elapsed: 32.277 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<6> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.stepdefs.MODULE_1_STEP_DEF.application_should_display_links_returned_in_resultspage_and_verify(MODULE_1_STEP_DEF.java:52)
+	at ✽.application should display links returned in resultspage and verify "6"(classpath:features/GOOGLE_SEARCH.feature:11)
+
+Verify Title in Aviva Home Page(Google Search Feature Validation)  Time elapsed: 26.546 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Access without')]"}
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: '192.168.1.7', ip: '2401:4900:1cb4:5ef8:e03e:af2c:eb8e:6ae6%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/6z/3b16_4917y9...}, goog:chromeOptions: {debuggerAddress: localhost:55892}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c0a07c86d34c98003d263e3408a9f15
+*** Element info: {Using=xpath, value=//*[contains(text(),'Access without')]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.webDriverInteractions.WebDriverInteractions.findElement(WebDriverInteractions.java:204)
+	at com.webDriverInteractions.WebDriverInteractions.captureText(WebDriverInteractions.java:117)
+	at com.Pages.Aviva_Home_Page.getElementText(Aviva_Home_Page.java:27)
+	at com.stepdefs.MODULE_1_STEP_DEF.verify_Title_of_the_of_the_Aviva_Home_Page(MODULE_1_STEP_DEF.java:75)
+	at ✽.verify Title of the "Access without Login" of the Aviva Home Page(classpath:features/GOOGLE_SEARCH.feature:23)
+
+Verify Error Message in Aviva Login Page(Google Search Feature Validation)  Time elapsed: 45.272 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="lnkLogin"]"}
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: '192.168.1.7', ip: '2401:4900:1cb4:5ef8:e03e:af2c:eb8e:6ae6%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/6z/3b16_4917y9...}, goog:chromeOptions: {debuggerAddress: localhost:55929}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9441f57a0faad61e5112469d0d9085c1
+*** Element info: {Using=xpath, value=//*[@id="lnkLogin"]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.webDriverInteractions.WebDriverInteractions.findElement(WebDriverInteractions.java:204)
+	at com.webDriverInteractions.WebDriverInteractions.findElement(WebDriverInteractions.java:260)
+	at com.webDriverInteractions.WebDriverInteractions.clickUsingJSExecutor(WebDriverInteractions.java:113)
+	at com.Pages.Google_Search.Click(Google_Search.java:30)
+	at com.stepdefs.MODULE_1_STEP_DEF.click_on_Aviva_Login_Link_in_the_Google_Search_Page_and_click_on_Login(MODULE_1_STEP_DEF.java:83)
+	at ✽.click on Aviva Login Link in the Google Search Page and click on Login(classpath:features/GOOGLE_SEARCH.feature:33)
+
