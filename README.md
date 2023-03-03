@@ -1,12 +1,12 @@
 # ENTERPRISE_CUCUMBER_AUTOMATION_FRAMEWORK
 This is an End to End  Robust Framework that helps teams to Automate any application.
 
-Table of Contents:
-Introduction
-Framework Structure
-The process of execution
-Verifying the reports
-Executing the project from Command line
+# Table of Contents:
+1. Introduction
+2. Framework Structure
+3. The process of execution
+4. Verifying the reports
+5. Executing the project from Command line
 
 
 1. INTRODUCTION:
